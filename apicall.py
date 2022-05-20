@@ -6,7 +6,7 @@ load_dotenv()
 
 git_token = os.getenv("GIT_TOKEN") # git_token is gonna be a Personal Access Token
 
-url = "https://api.github.com/orgs/ORG_NAME_HERE/repos?simple=yes&per_page=100&page=1"
+url = "https://api.github.com/orgs/ORG_NAME_HERE/repos?per_page=100&page=1"
 res=requests.get(url,headers={"Authorization": git_token})
 repos=res.json()
 #adds the following pages to repos
